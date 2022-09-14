@@ -32,10 +32,7 @@ jobs:
         shell: sudo bash {0}
       - name: Install dependencies
         run: |
-          apt-get upgrade
-          apt-get install --yes \
-            r-cran-glue
-          apt-get install --yes \
+          apt-get install --yes --no-upgrade \
             r-cran-spelling
         shell: sudo bash {0}
       - name: Spell check
