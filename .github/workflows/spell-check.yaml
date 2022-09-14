@@ -39,5 +39,11 @@ jobs:
       - name: Spell check
         run: |
           library("spelling")
-          spell_check_package()
+          typos <- spell_check_package()
+          if (nrow(typos)) {
+            print(typos)
+            stop("")
+          } else {
+            message("No typos detected!!")
+          }
         shell: Rscript {0}
