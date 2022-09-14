@@ -33,6 +33,8 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get install --yes \
+            r-cran-glue
+          apt-get install --yes \
             r-cran-spelling
         shell: sudo bash {0}
       - name: Spell check
