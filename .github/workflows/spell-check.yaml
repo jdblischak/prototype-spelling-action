@@ -25,10 +25,10 @@ jobs:
             | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
           echo "deb [arch=amd64] https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" \
             > /etc/apt/sources.list.d/cran_r.list
-          echo "Package: *" > /etc/apt/preferences.d/99cranapt
-          echo "Pin: release o=CRAN-Apt Project" >> /etc/apt/preferences.d/99cranapt
-          echo "Pin: release l=CRAN-Apt Packages" >> /etc/apt/preferences.d/99cranapt
-          echo "Pin-Priority: 700"  >> /etc/apt/preferences.d/99cranapt
+          # echo "Package: *" > /etc/apt/preferences.d/99cranapt
+          # echo "Pin: release o=CRAN-Apt Project" >> /etc/apt/preferences.d/99cranapt
+          # echo "Pin: release l=CRAN-Apt Packages" >> /etc/apt/preferences.d/99cranapt
+          # echo "Pin-Priority: 700"  >> /etc/apt/preferences.d/99cranapt
           apt-get update
         shell: sudo bash {0}
       - name: Install dependencies
