@@ -30,6 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get install --yes \
+            pandoc \
             r-cran-callr \
             r-cran-fs \
             r-cran-getpass \
