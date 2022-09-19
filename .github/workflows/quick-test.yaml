@@ -32,7 +32,7 @@ jobs:
           apt-get install --yes \
             r-cran-callr \
             r-cran-fs \
-            r-cran-getPass \
+            r-cran-getpass \
             r-cran-git2r \
             r-cran-glue \
             r-cran-httpuv \
@@ -42,8 +42,6 @@ jobs:
             r-cran-rprojroot \
             r-cran-rstudioapi \
             r-cran-stringr \
-            r-cran-tools \
-            r-cran-utils \
             r-cran-whisker \
             r-cran-xfun \
             r-cran-yaml
