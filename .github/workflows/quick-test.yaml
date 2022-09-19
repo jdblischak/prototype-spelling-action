@@ -69,7 +69,7 @@ jobs:
             "```"
           )
           cat(lines, file = rmd, sep = "\n", append = TRUE)
-          wflow_build(view = FALSE)
+          wflow_build("analysis/*Rmd", view = FALSE)
           wflow_status()
           wflow_publish("analysis/quick-test.Rmd", view = FALSE)
           wflow_status()
