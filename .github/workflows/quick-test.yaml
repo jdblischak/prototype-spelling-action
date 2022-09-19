@@ -53,3 +53,16 @@ jobs:
         run: R CMD build --no-manual .
       - name: Check
         run: R CMD check --no-manual --no-tests workflowr_*.tar.gz
+      - name: Test essential functionality
+        run: |
+          wflow_start("quick-test", user.name = "test", user.email = "test")
+          wflow_open("analysis/quick-test.Rmd")
+          wflow_build(view = FALSE)
+          wflow_status()
+          wflow_publish("analysis/quick-test.Rmd", view = FALSE)
+          wflow_status()
+          wflow_use_github("test", create_on_github = FALSE)
+          wflow_use_gitlab("test")
+          wflow_remove("analysis/quick-test.Rmd")
+          wflow_status()
+        shell: Rscript {0}
