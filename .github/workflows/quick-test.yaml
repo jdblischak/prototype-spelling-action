@@ -5,6 +5,8 @@ jobs:
   current:
     runs-on: ubuntu-22.04
     name: quick-test
+    env:
+      _R_CHECK_FORCE_SUGGESTS_=FALSE
     steps:
       - uses: actions/checkout@v2
         with:
