@@ -60,7 +60,15 @@ jobs:
         run: |
           library("workflowr")
           wflow_start("/tmp/quick-test", user.name = "test", user.email = "test")
-          wflow_open("analysis/quick-test.Rmd")
+          rmd <- "analysis/quick-test.Rmd"
+          wflow_open(rmd)
+          lines <- c(
+            "",
+            "```{r chunkname}",
+            "plot(1:10)",
+            "```"
+          )
+          cat(lines, file = rmd, sep = "\n", append = TRUE)
           wflow_build(view = FALSE)
           wflow_status()
           wflow_publish("analysis/quick-test.Rmd", view = FALSE)
