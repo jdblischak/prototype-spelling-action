@@ -49,7 +49,7 @@ jobs:
             r-cran-xfun \
             r-cran-yaml \
             r-cran-clipr \
-            r-cran-miniUI \
+            r-cran-miniui \
             r-cran-reticulate \
             r-cran-sessioninfo \
             r-cran-shiny \
