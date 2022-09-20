@@ -67,4 +67,4 @@ jobs:
       - name: Build
         run: R CMD build --no-build-vignettes --no-manual .
       - name: Check
-        run: R CMD check --no-build-vignettes --no-manual --as-cran workflowr_*.tar.gz
+        run: R CMD check --ignore-vignettes --no-manual --as-cran workflowr_*.tar.gz
